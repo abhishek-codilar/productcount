@@ -1,4 +1,5 @@
 <?php
+
 namespace Codilar\ProductCount\Block;
  
 class ProductsList extends \Magento\CatalogWidget\Block\Product\ProductsList
@@ -8,7 +9,9 @@ class ProductsList extends \Magento\CatalogWidget\Block\Product\ProductsList
  
     public function createCollection()
     {
-        /** @var $collection \Magento\Catalog\Model\ResourceModel\Product\Collection */
+        /** 
+         * @var $collection \Magento\Catalog\Model\ResourceModel\Product\Collection 
+         **/
         $collection = $this->productCollectionFactory->create();
         $collection->setVisibility($this->catalogProductVisibility->getVisibleInCatalogIds());
  

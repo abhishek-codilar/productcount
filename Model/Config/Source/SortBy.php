@@ -1,4 +1,5 @@
 <?php
+
 namespace Codilar\ProductCount\Model\Config\Source;
  
 class SortBy implements \Magento\Framework\Option\ArrayInterface

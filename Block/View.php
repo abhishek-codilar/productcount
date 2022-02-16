@@ -6,7 +6,10 @@ use Magento\Framework\View\Element\Template;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;
 
 class View extends Template
-{
+{   
+    /**
+    * @var ProductCollectionFactory
+    */
     protected $_productCollectionFactory;
 
     public function __construct(

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
-    <widget id="inchoo_products_list" class="Codilar\ProductCount\Block\ProductsList"
-            placeholder_image="Inchoo_CatalogWidget::images/inchoo_widget_block.png">
+    <widget id="Codilar_products_list" class="Codilar\ProductCount\Block\ProductsList"
+            placeholder_image="Codilar_CatalogWidget::images/Codilar_widget_block.png">
         <label translate="true">My Catalog Products List</label>
-        <description>Inchoo - Extended Catalog Products List</description>
+        <description>products_count - Extended Catalog Products List</description>
         <parameters>
             <parameter name="title" xsi:type="text" required="false" visible="true">
                 <label translate="true">Title</label>
