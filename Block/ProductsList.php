@@ -43,4 +43,20 @@ class ProductsList extends \Magento\CatalogWidget\Block\Product\ProductsList
         }
         return $this->getData('collection_sort_order');
     }
+    public function ProductCount(){
+        $collection = $this->productCollectionFactory->create();
+        $collection->setVisibility($this->catalogProductVisibility->getVisibleInCatalogIds());
+ 
+        $collection = $this->_addProductAttributesAndPrices($collection)
+            ->addStoreFilter()
+            ->setPageSize($this->getPageSize())
+            ->setCurPage($this->getRequest()->getParam($this->getData('page_var_name'), 1))
+            ->setOrder($this->getSortBy(), $this->getSortOrder());
+ 
+        $conditions = $this->getConditions();
+        $conditions->collectValidatedAttributes($collection);
+        $this->sqlBuilder->attachConditionToCollection($collection, $conditions);
+
+        return $collection->count();
+    }
 }
